@@ -69,10 +69,10 @@ public class VistaOperaciones extends javax.swing.JFrame {
 
         jpResultados.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        jlResultadoCL.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jlResultadoCL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlResultadoCL.setText("<html> <h3>Combinación lineal</h3> </html> ");
 
-        jlResultadoMCD.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jlResultadoMCD.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlResultadoMCD.setText("<html> <h3> MCD</h3> </html> ");
 
         javax.swing.GroupLayout jpResultadosLayout = new javax.swing.GroupLayout(jpResultados);

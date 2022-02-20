@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package euclidesbezoutmcd.presentacion;
+package euclidesbezoutmcd.logica;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -68,23 +68,21 @@ public class Combinaciones {
             arrayAux = new int[arreglo.length];
             for(int i = 0; i<arreglo.length; i++)
                 arrayAux[i] = n[arreglo[i]];
-            
+
             retorno.add(arrayAux);
-            System.out.println(Arrays.toString(arrayAux));
         }
         return retorno;
     }
 
     private boolean existeArreglo(int[] array, List<int[]> retorno) {
-        int incidencias = 0;
-        for (int i = 0; i < retorno.size(); i++) {
+        int incidencias;
+        for(int [] comparar : retorno){
             incidencias = 0;
-            for (int j = 0; j < retorno.get(i).length; j++) 
-                if( array[j] == retorno.get(i)[j] )
+            for (int i = 0; i < comparar.length; i++)
+                if(array[i] == comparar[i])
                     incidencias++;
-            if(incidencias == retorno.size()){
+            if(incidencias == array.length)
                 return true;
-            }
         }
         return false;
     }

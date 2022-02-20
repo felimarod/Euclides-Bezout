@@ -105,7 +105,6 @@ public class Bezout {
             if ( i < numerosIniciales.length-1)
                 combinacionLineal += "+ ";
         }
-        
     }
 
     public List<String> getListaRegresion() {

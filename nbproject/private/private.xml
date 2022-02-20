@@ -3,7 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Workspace/EuclidesBezoutMCD/src/euclidesbezoutmcd/presentacion/ModeloConsola.java</file>
+            <file>file:/D:/Workspace/Euclides-Bezout/src/euclidesbezoutmcd/logica/Euclides.java</file>
+            <file>file:/D:/Workspace/Euclides-Bezout/src/euclidesbezoutmcd/logica/Bezout.java</file>
+            <file>file:/D:/Workspace/Euclides-Bezout/src/euclidesbezoutmcd/presentacion/VistaOperaciones.java</file>
         </group>
     </open-files>
 </project-private>

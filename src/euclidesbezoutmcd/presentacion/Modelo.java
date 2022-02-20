@@ -42,9 +42,9 @@ public class Modelo {
 
                     // Algoritmos
                     String algoritmos = "<html>";
-                    for(String linea: algoritmoE.getListaAlgoritmos()){
+                    for(String linea: algoritmoE.getListaAlgoritmos())
                         algoritmos += linea + "<br>";
-                    }
+                    
                     algoritmos += "</html>";
                     getVistaOperaciones().getJlAEuclides().setText(algoritmos);
 
