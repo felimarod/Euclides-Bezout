@@ -4,9 +4,6 @@ import java.util.Scanner;
 
 import euclidesbezoutmcd.logica.Bezout;
 import euclidesbezoutmcd.logica.Euclides;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 public class ModeloConsola {
     Scanner sc;

@@ -29,8 +29,7 @@ public class Division{
      
      */
     public int getCociente() {
-        return cociente
-;
+        return cociente;
     }
 
     /**

@@ -31,16 +31,7 @@ public class Euclides{
     }
     
     public boolean tieneCombiancionesLineales(){
-//        List<int[]> combinacionesPosibles = new ArrayList<>();
         List<int[]> combinacionesPosibles = Combinaciones.getInstance().getCombinaciones(numeros);
-        int [] aux;
-        
-//        for (int[] combinacionPosible : Combinaciones.getInstance().getCombinaciones(numeros))
-//            if(combinacionSirve(combinacionPosible))
-//                combinacionesPosibles.add(combinacionPosible);
-//        
-//        if(combinacionesPosibles.size() <= 0)
-//            return false;
         int mcdAux = 0, contadorLineas;
         for (int[] posible : combinacionesPosibles) {
             contadorLineas = 0;
@@ -63,52 +54,6 @@ public class Euclides{
         return combinacionesLineales.size() > 0;        
     }
     
-//    private boolean combinacionSirve(int [] posible){
-//        List<Integer> listaMcds = new ArrayList<>();
-//        int mcdAux;
-//        System.out.println("Linea posible: " + Arrays.toString(posible));
-//        
-//        for(int i=1; i<posible.length; i++){
-//            if(i==1){
-//                listaMcds.add(mcd(posible[0], posible[i]));
-//            }else{
-//                mcdAux = mcd(posible[i], listaMcds.get(i-2));
-//                if(listaMcds.contains(mcdAux))
-//                    return false;
-//                else
-//                    listaMcds.add(mcdAux);
-//            }
-//        }
-
-//        int j=0;
-//        for(int i=posible.length-2; i>=0;i--){
-//            mcdAux = 0;
-//            if(i == posible.length-2){
-//                mcdAux = mcd(posible[i], posible[i+1]);
-//                System.out.println(posible[i] + " y " + posible[i+1]);
-//            } else {
-//                //System.out.println(listaMcds);
-//                mcdAux = mcd(posible[i], listaMcds.get(j++));
-//                //System.out.println(posible[i] + " " + listaMcds.get(listaMcds.size()-1)  + " \n mcd : " + mcd(posible[i], listaMcds.get(listaMcds.size() - 1)));
-//                System.out.println(posible[i] + " y " + posible[i+1]);
-//                if(listaMcds.contains(mcdAux))
-//                    return false;
-//            }
-//            listaMcds.add(mcdAux);
-//            System.out.println("mcds "+ listaMcds);
-//            
-//        }
-//        System.out.println("Linea funcional: " + Arrays.toString(posible));
-//        
-//        listaMcds.clear();
-//        return true;
-//    }
-//    private boolean combinacionSirve(int [] orden){
-//        int mcd1, mcd2;
-//        mcd1 = mcd(numeros[orden[1]], numeros[orden[2]]);
-//        mcd2 = mcd(numeros[orden[0]], mcd1);
-//        return mcd2 != mcd1;
-//    }
     private int cantidadAlgoritmos(int num1, int num2){
         listaAlgoritmos.clear();
         listaDivisiones.clear();
@@ -139,6 +84,7 @@ public class Euclides{
     public int mcd(){
         int numerosOrdenados [] = Combinaciones.getInstance().getCombinaciones(numeros).get(0);
         
+        resultado = 1;
         listaDivisiones.clear();
         for(int i=numerosOrdenados.length-2; i>=0;i--)
             if(i == numerosOrdenados.length-2)
@@ -153,7 +99,7 @@ public class Euclides{
         if(mayor < menor){
             int aux = menor;
             menor = mayor;
-            mayor = menor;
+            mayor = aux;
         }
             
         listaDivisiones.add(new Division(mayor, menor));
